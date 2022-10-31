@@ -1,0 +1,46 @@
+.mobileNav {
+    width: 100%;
+    padding-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__mobileBtn {
+        display: flex;
+        font-size: 4.4rem;
+        color: $gray;
+        z-index: 10;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__mobileMenu {
+        width: 100%;
+        height: fit-content;
+        background-color: $darkPurple;
+        position: absolute;
+        top: -100vh;
+        left: 0;
+        padding: 1rem 2.4rem;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+    }
+}
+
+.show {
+    top: 10rem;
+}
+
+@media screen and (min-width: 912px) {
+    .mobileNav {
+        display: none;
+    }
+}

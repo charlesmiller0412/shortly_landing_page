@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    padding: 0 2.4rem;
+    width: 100vw;
+    height: 100vh;
+    font-family: $poppins;
+}
+
+header {
+    position: relative;
+    user-select: none;
+}
+
+main {
+    max-width: 110.8rem;
+}
+
+@media screen and (min-width: 912px) {
+    body {
+        padding: 0 14vw;
+    }
+}

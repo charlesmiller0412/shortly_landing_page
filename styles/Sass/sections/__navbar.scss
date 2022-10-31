@@ -1,0 +1,25 @@
+.navbar {
+    display: none;
+}
+@media screen and (min-width: 912px) {
+    .navbar {
+        max-width: 110.8rem;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 4.8rem;
+        &__left {
+            display: flex;
+            width: 43rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+
+.navbar__logo {
+    position: relative;
+    height: 3.3rem;
+    width: 12rem;
+}

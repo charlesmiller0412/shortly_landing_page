@@ -1,0 +1,98 @@
+@import "./_variables";
+
+.navLinks,
+.userLinks {
+    & ul {
+        text-align: center;
+        & li {
+            padding: 3rem 0;
+            & a {
+                font-size: 1.8rem;
+                font-weight: $bold;
+                color: #ffffff;
+                text-transform: capitalize;
+                text-decoration: none;
+                width: 100%;
+                height: 100%;
+                display: grid;
+                place-items: center;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        & #signUp {
+            padding: 0;
+            margin-bottom: 3rem;
+            background-color: $cyan;
+            height: 4.8rem;
+            display: grid;
+            place-items: center;
+            border-radius: 2.8rem;
+            -webkit-border-radius: 2.8rem;
+            -moz-border-radius: 2.8rem;
+            -ms-border-radius: 2.8rem;
+            -o-border-radius: 2.8rem;
+            &:hover {
+                filter: brightness(1.3);
+                -webkit-filter: brightness(1.3);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 912px) {
+    .navLinks {
+        & ul {
+            display: flex;
+            width: 26.5rem;
+            justify-content: space-between;
+            & li {
+                padding: 0;
+                & a {
+                    font-size: 1.5rem;
+                    color: $gray;
+                    transition: all 0.2s;
+                    -webkit-transition: all 0.2s;
+                    -moz-transition: all 0.2s;
+                    -ms-transition: all 0.2s;
+                    -o-transition: all 0.2s;
+                    &:hover {
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+    .userLinks {
+        & ul {
+            display: flex;
+            align-items: center;
+            & li {
+                padding: 0;
+
+                & a {
+                    color: $gray;
+                    font-size: 1.5rem;
+                    &:hover {
+                        color: $black;
+                    }
+                }
+            }
+
+            & #signUp {
+                height: 4rem;
+                margin: 0;
+                width: 10.5rem;
+                margin-left: 1.7vw;
+                &:hover {
+                    filter: brightness(1.3);
+                    -webkit-filter: brightness(1.3);
+                }
+                & a {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
