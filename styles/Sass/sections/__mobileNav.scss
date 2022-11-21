@@ -1,9 +1,10 @@
 .mobileNav {
     width: 100%;
-    padding-top: 4rem;
+    padding: 4rem 2.4rem 2.4rem 2.4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 20;
 
     &__mobileBtn {
         display: flex;
@@ -32,6 +33,7 @@
         -moz-transition: all 0.5s;
         -ms-transition: all 0.5s;
         -o-transition: all 0.5s;
+        z-index: 10;
     }
 }
 

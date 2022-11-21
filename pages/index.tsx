@@ -27,7 +27,6 @@ export default function Home() {
                 <Statistics />
                 <Banner />
             </main>
-
             <footer></footer>
         </div>
     );

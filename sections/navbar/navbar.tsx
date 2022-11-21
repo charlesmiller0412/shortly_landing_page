@@ -2,6 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { NavLinks } from "./components/navLinks";
 import { UserLinks } from "./components/userLinks";
+import { Logo } from "../../components/logo";
 
 export const Navbar = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -12,16 +13,7 @@ export const Navbar = () => {
     return (
         <div className="navbar">
             <div className="navbar__left">
-                <div className="navbar__logo">
-                    <Image
-                        src="/assets/logo.svg"
-                        alt="Shortly logo"
-                        fill
-                        className="contain"
-                        priority
-                        sizes="12rem, 3.3rem"
-                    />
-                </div>
+                <Logo />
                 <NavLinks />
             </div>
             <UserLinks />

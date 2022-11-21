@@ -6,7 +6,6 @@
 }
 
 body {
-    padding: 0 2.4rem;
     width: 100vw;
     height: 100vh;
     font-family: $poppins;
@@ -17,12 +16,21 @@ header {
     user-select: none;
 }
 
-main {
-    max-width: 110.8rem;
+section {
+    padding: 0 2.4rem;
+    position: relative;
+    overflow-x: hidden;
 }
 
 @media screen and (min-width: 912px) {
-    body {
-        padding: 0 14vw;
+    main {
+        overflow: hidden;
+        position: relative;
+    }
+    section {
+        max-width: 110.8rem;
+        margin: auto;
+        position: static;
+        padding: 0 1rem;
     }
 }

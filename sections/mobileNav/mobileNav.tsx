@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { MobileMenu } from "../navbar/components/mobileMenu";
+import { MobileMenu } from "./components/mobileMenu";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { Logo } from "../navbar/components/logo";
+import { Logo } from "../../components/logo";
 export const MobileNav = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
 
