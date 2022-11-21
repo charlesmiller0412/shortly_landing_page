@@ -1,0 +1,84 @@
+.input {
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f2f2;
+    overflow: visible;
+    &__entry {
+        position: relative;
+        & form {
+            position: absolute;
+            top: -50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            width: calc(100% - 4.8rem);
+            width: 100%;
+            display: grid;
+            place-items: center;
+            gap: 1.6rem;
+            padding: 2.4rem;
+            background-image: url("/assets/bg-shorten-mobile.svg");
+            background-color: $darkPurple;
+            background-repeat: no-repeat;
+            background-position: right 0 top 0;
+            border-radius: 1rem;
+            -webkit-border-radius: 1rem;
+            -moz-border-radius: 1rem;
+            -ms-border-radius: 1rem;
+            -o-border-radius: 1rem;
+            & input {
+                height: 5rem;
+                width: 100%;
+                font-size: 1.6rem;
+                line-height: 3.6rem;
+                letter-spacing: 0.012rem;
+                padding: 1.6rem 0.6rem;
+            }
+            & button {
+                height: 5rem;
+                width: 100%;
+                background-color: $cyan;
+                border-radius: 0.5rem;
+                -webkit-border-radius: 0.5rem;
+                -moz-border-radius: 0.5rem;
+                -ms-border-radius: 0.5rem;
+                -o-border-radius: 0.5rem;
+                border: 1px solid $gray;
+                font-weight: $bold;
+                font-size: 1.8rem;
+                line-height: 2.7rem;
+                color: $white;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 912px) {
+    .input {
+        &__entry {
+            & form {
+                display: flex;
+                padding: 5.2rem 6.4rem;
+                background-image: url("/assets/bg-shorten-desktop.svg");
+                background-position: center;
+                & input {
+                    border-radius: 1rem;
+                    -webkit-border-radius: 1rem;
+                    -moz-border-radius: 1rem;
+                    -ms-border-radius: 1rem;
+                    -o-border-radius: 1rem;
+                }
+                & button {
+                    width: 18.8rem;
+                    border-radius: 1rem;
+                    -webkit-border-radius: 1rem;
+                    -moz-border-radius: 1rem;
+                    -ms-border-radius: 1rem;
+                    -o-border-radius: 1rem;
+                }
+            }
+        }
+    }
+}

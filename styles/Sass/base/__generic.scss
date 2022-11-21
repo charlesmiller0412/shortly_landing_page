@@ -23,14 +23,9 @@ section {
 }
 
 @media screen and (min-width: 912px) {
-    main {
-        overflow: hidden;
-        position: relative;
-    }
     section {
-        max-width: 110.8rem;
         margin: auto;
         position: static;
-        padding: 0 1rem;
+        padding: 0 14vw;
     }
 }
