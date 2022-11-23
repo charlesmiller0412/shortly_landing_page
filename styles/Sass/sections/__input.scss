@@ -1,7 +1,8 @@
 .input {
     width: 100%;
-    height: 100vh;
-    background-color: #f2f2f2;
+    height: fit-content;
+    min-height: 12rem;
+    background-color: $white;
     overflow: visible;
     &__entry {
         position: relative;
@@ -13,7 +14,6 @@
             -moz-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
             -o-transform: translateY(-50%);
-            width: calc(100% - 4.8rem);
             width: 100%;
             display: grid;
             place-items: center;
@@ -35,34 +35,74 @@
                 line-height: 3.6rem;
                 letter-spacing: 0.012rem;
                 padding: 1.6rem 0.6rem;
-            }
-            & button {
-                height: 5rem;
-                width: 100%;
-                background-color: $cyan;
                 border-radius: 0.5rem;
                 -webkit-border-radius: 0.5rem;
                 -moz-border-radius: 0.5rem;
                 -ms-border-radius: 0.5rem;
                 -o-border-radius: 0.5rem;
-                border: 1px solid $gray;
-                font-weight: $bold;
-                font-size: 1.8rem;
-                line-height: 2.7rem;
-                color: $white;
             }
         }
     }
+    &__links {
+        position: absolute;
+        width: 100%;
+        display: grid;
+        height: fit-content;
+        margin-top: 12rem;
+        gap: 2.4rem;
+        &--savedLink {
+            width: 100%;
+            height: fit-content;
+            background-color: #fff;
+            color: black;
+            font-size: 2rem;
+            border-radius: 0.5rem;
+            -webkit-border-radius: 0.5rem;
+            -moz-border-radius: 0.5rem;
+            -ms-border-radius: 0.5rem;
+            -o-border-radius: 0.5rem;
+            &--url,
+            &--right {
+                padding: 0.6rem 1.6rem;
+            }
+            &--right {
+                border-top: 1px solid rgb(158, 154, 168, 0.25);
+
+                color: $cyan;
+                & .btnInput {
+                    width: 100%;
+                    display: grid;
+                    place-items: center;
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                }
+            }
+        }
+        &--savedLink,
+        &--savedLink--right {
+            font-size: 1.6rem;
+            font-weight: $medium;
+            line-height: 3.6rem;
+            letter-spacing: 0.012rem;
+        }
+    }
+}
+
+.clicked {
+    background-color: $darkPurple;
 }
 
 @media screen and (min-width: 912px) {
     .input {
         &__entry {
+            margin: auto;
             & form {
                 display: flex;
                 padding: 5.2rem 6.4rem;
                 background-image: url("/assets/bg-shorten-desktop.svg");
                 background-position: center;
+                background-size: cover;
+
                 & input {
                     border-radius: 1rem;
                     -webkit-border-radius: 1rem;
@@ -70,14 +110,36 @@
                     -ms-border-radius: 1rem;
                     -o-border-radius: 1rem;
                 }
-                & button {
-                    width: 18.8rem;
-                    border-radius: 1rem;
-                    -webkit-border-radius: 1rem;
-                    -moz-border-radius: 1rem;
-                    -ms-border-radius: 1rem;
-                    -o-border-radius: 1rem;
+            }
+        }
+        &__links {
+            &--savedLink {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &--right {
+                    display: flex;
+                    border-top: none;
+
+                    width: 34.4rem;
+                    justify-content: space-between;
+                    &-link {
+                        display: grid;
+                        place-items: center;
+                    }
+                    & .btnInput {
+                        width: 10rem;
+                        height: 4rem;
+                        font-size: 1.5rem;
+                        line-height: 2.25rem;
+                    }
                 }
+            }
+            &--savedLink,
+            &--savedLink--right {
+                font-size: 2rem;
+                letter-spacing: 0.015rem;
+                padding: 0;
             }
         }
     }

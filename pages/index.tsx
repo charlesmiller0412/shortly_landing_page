@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { Banner } from "../sections/banner/banner";
+import { Footer } from "../sections/footer/footer";
 import { Hero } from "../sections/hero/hero";
+import { SavedLink } from "../sections/input/components/savedLink";
 import { Input } from "../sections/input/input";
 import { MobileNav } from "../sections/mobileNav/mobileNav";
 import { Navbar } from "../sections/navbar/navbar";
@@ -27,7 +29,9 @@ export default function Home() {
                 <Statistics />
                 <Banner />
             </main>
-            <footer></footer>
+            <footer>
+                <Footer />
+            </footer>
         </div>
     );
 }

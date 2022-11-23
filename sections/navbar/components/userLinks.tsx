@@ -7,7 +7,7 @@ export const UserLinks = () => {
                 <li>
                     <a href="#">login</a>
                 </li>
-                <Btn text="sign up" href="#" />
+                <Btn text="sign up" href="#" className="btn" />
             </ul>
         </div>
     );

@@ -57,6 +57,28 @@
     }
 }
 
+.btnInput {
+    height: 5rem;
+    width: 100%;
+    background-color: $cyan;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    border: 1px solid $gray;
+    font-weight: $bold;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: $white;
+    cursor: pointer;
+    user-select: none;
+    text-transform: capitalize;
+    &:hover {
+        background-color: #9ae3e3;
+    }
+}
+
 @media screen and (min-width: 912px) {
     .navLinks {
         & ul {
@@ -103,5 +125,15 @@
                 margin-left: 1.7vw;
             }
         }
+    }
+    .btnInput {
+        width: 18.8rem;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+        font-size: 2rem;
+        line-height: 3rem;
     }
 }

@@ -10,7 +10,7 @@ export const Hero = () => {
                     Build your brand’s recognition and get detailed insights on
                     how your links are performing.
                 </p>
-                <Btn text="get started" href="#input" />
+                <Btn text="get started" href="#input" className="btn" />
             </div>
             <div className="hero__right">
                 <Image
