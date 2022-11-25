@@ -10,7 +10,7 @@
         height: 52%;
         display: flex;
         flex-direction: column;
-        justify-content: start;
+        justify-content: flex-start;
         align-items: center;
         text-align: center;
         & h1 {
@@ -66,7 +66,7 @@
             max-height: 35rem;
             width: 50%;
             max-width: 56.5rem;
-            place-items: start;
+            place-items: flex-start;
             & h1 {
                 text-align: left;
                 font-size: clamp(4.5rem, 5vw, 8rem);

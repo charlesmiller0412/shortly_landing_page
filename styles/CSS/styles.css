@@ -246,7 +246,7 @@ section {
   height: 52%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
 }
@@ -299,7 +299,7 @@ section {
     max-height: 35rem;
     width: 50%;
     max-width: 56.5rem;
-    place-items: start;
+    place-items: flex-start;
   }
   .hero__left h1 {
     text-align: left;
@@ -343,7 +343,6 @@ section {
   position: relative;
 }
 .input__entry form {
-  position: absolute;
   top: -50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
@@ -378,13 +377,39 @@ section {
   -ms-border-radius: 0.5rem;
   -o-border-radius: 0.5rem;
 }
+.input__entry form .btnInput {
+  display: grid;
+  place-items: center;
+}
+.input .error {
+  border: 3px solid #f46262;
+  position: relative;
+}
+.input .error__text {
+  color: #f46262;
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.8rem;
+  letter-spacing: 0.011rem;
+  justify-self: flex-start;
+  margin-top: -1rem;
+  display: none;
+}
+.input .show {
+  display: flex;
+}
 .input__links {
-  position: absolute;
+  margin-top: -5rem;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   display: grid;
   height: fit-content;
-  margin-top: 12rem;
   gap: 2.4rem;
+}
+.input__links .btn {
+  background-color: #f46262;
+  font-size: 1.2rem;
 }
 .input__links--savedLink {
   width: 100%;
@@ -397,13 +422,30 @@ section {
   -moz-border-radius: 0.5rem;
   -ms-border-radius: 0.5rem;
   -o-border-radius: 0.5rem;
+  overflow: hidden;
 }
 .input__links--savedLink--url, .input__links--savedLink--right {
   padding: 0.6rem 1.6rem;
 }
+.input__links--savedLink--url {
+  color: #3a3054;
+  display: flex;
+  justify-content: space-between;
+}
+.input__links--savedLink--url-text {
+  display: inline-block;
+  font-size: 1.6rem;
+  color: #3a3054;
+  line-height: 3.6rem;
+  letter-spacing: 0.012rem;
+  width: 70%;
+  overflow: auto;
+}
+.input__links--savedLink--url button {
+  margin-left: 1rem;
+}
 .input__links--savedLink--right {
   border-top: 1px solid rgba(158, 154, 168, 0.25);
-  color: #2bd0d0;
 }
 .input__links--savedLink--right .btnInput {
   width: 100%;
@@ -412,15 +454,19 @@ section {
   font-size: 1.6rem;
   line-height: 2.4rem;
 }
-.input__links--savedLink, .input__links--savedLink--right {
+.input__links--savedLink, .input__links--savedLink--right a {
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 3.6rem;
   letter-spacing: 0.012rem;
 }
+.input__links--savedLink--right a:first-child {
+  color: #2bd0d0;
+  text-decoration: none;
+}
 
 .clicked {
-  background-color: #3a3054;
+  background-color: #3a3054 !important;
 }
 
 @media screen and (min-width: 912px) {
@@ -441,15 +487,28 @@ section {
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
   }
+  .input__links .btn {
+    width: 25%;
+    margin: auto;
+  }
   .input__links--savedLink {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+  .input__links--savedLink--url {
+    justify-content: flex-start;
+    width: 50%;
+  }
+  .input__links--savedLink--url-text {
+    display: inline-block;
+  }
+  .input__links--savedLink--url button {
+    margin-left: 1rem;
+  }
   .input__links--savedLink--right {
     display: flex;
     border-top: none;
-    width: 34.4rem;
     justify-content: space-between;
   }
   .input__links--savedLink--right-link {
@@ -461,13 +520,35 @@ section {
     height: 4rem;
     font-size: 1.5rem;
     line-height: 2.25rem;
+    margin-left: 2.4rem;
   }
   .input__links--savedLink, .input__links--savedLink--right {
     font-size: 2rem;
     letter-spacing: 0.015rem;
-    padding: 0;
+    position: relative;
+  }
+  .error__text {
+    font-size: 1.6rem;
+    position: absolute;
+    bottom: 20%;
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
   }
 }
+.deleteThis {
+  color: #f46262;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+}
+.deleteThis:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .statistics {
   background-color: #eff1f7;
   padding-top: 8rem;

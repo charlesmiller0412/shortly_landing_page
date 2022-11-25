@@ -17,6 +17,8 @@ export const Hero = () => {
                     src="/assets/illustration-working.svg"
                     alt="working illustration"
                     fill
+                    sizes="(max-width: 611px) 50% 51.1rem, (min-width: 612px) 60% 75rem, (min-width: 912px) 50vh 60vw"
+                    priority
                 />
             </div>
         </section>

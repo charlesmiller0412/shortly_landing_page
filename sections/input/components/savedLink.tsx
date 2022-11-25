@@ -1,32 +1,44 @@
+import { faPersonCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { Btn } from "../../../components/btn";
 
-export const SavedLink = () => {
+export const SavedLink = (props: any) => {
     const [copied, setCopied] = useState(false);
-    const [currentTarget, setCurrentTarget] = useState("");
 
     function handleClick() {
-        //   navigator.clipboard.writeText(copyText.value);
+        navigator.clipboard.writeText(props.newLink);
+        setCopied(true);
+        setTimeout(() => {
+            setCopied(false);
+        }, 3000);
     }
+
     return (
-        <div className="input__links">
-            <div className="input__links--savedLink">
-                <div className="input__links--savedLink--url">
-                    https://www.dubsdub.com
+        <div className="input__links--savedLink">
+            <div className="input__links--savedLink--url">
+                <span className="input__links--savedLink--url-text">
+                    {props.oldLink}
+                </span>
+                <button
+                    className="deleteThis"
+                    onClick={props.deleteThis}
+                    id={props.oldLink}
+                >
+                    Delete...
+                </button>
+            </div>
+            <div className="input__links--savedLink--right">
+                <div className="input__links--savedLink--right-link">
+                    <a href={props.newLink} target="_blank" rel="noreferrer">
+                        {props.newLink}
+                    </a>
                 </div>
-                <div className="input__links--savedLink--right">
-                    <div className="input__links--savedLink--right-link">
-                        https://rel.ink/k4lKyk
-                    </div>
-                    <Btn
-                        text={copied == true ? "copied!" : "copy"}
-                        className={
-                            copied == true ? "btnInput clicked" : "btnInput"
-                        }
-                        // onClick={}
-                        id="copyBtn1"
-                    />
-                </div>
+                <Btn
+                    text={copied == true ? "copied!" : "copy"}
+                    className={copied == true ? "btnInput clicked" : "btnInput"}
+                    onClick={handleClick}
+                    id="copyBtn1"
+                />
             </div>
         </div>
     );

@@ -7,7 +7,6 @@
     &__entry {
         position: relative;
         & form {
-            position: absolute;
             top: -50%;
             transform: translateY(-50%);
             -webkit-transform: translateY(-50%);
@@ -41,15 +40,45 @@
                 -ms-border-radius: 0.5rem;
                 -o-border-radius: 0.5rem;
             }
+            & .btnInput {
+                display: grid;
+                place-items: center;
+            }
         }
     }
+
+    .error {
+        border: 3px solid $red;
+        position: relative;
+
+        &__text {
+            color: $red;
+            font-size: 1.2rem;
+            font-style: italic;
+            line-height: 1.8rem;
+            letter-spacing: 0.011rem;
+            justify-self: flex-start;
+            margin-top: -1rem;
+            display: none;
+        }
+    }
+    .show {
+        display: flex;
+    }
+
     &__links {
-        position: absolute;
+        margin-top: -5rem;
+        display: flex;
+        flex-direction: column;
         width: 100%;
         display: grid;
         height: fit-content;
-        margin-top: 12rem;
         gap: 2.4rem;
+
+        & .btn {
+            background-color: $red;
+            font-size: 1.2rem;
+        }
         &--savedLink {
             width: 100%;
             height: fit-content;
@@ -65,10 +94,26 @@
             &--right {
                 padding: 0.6rem 1.6rem;
             }
+            overflow: hidden;
+            &--url {
+                color: $darkPurple;
+                display: flex;
+                justify-content: space-between;
+                &-text {
+                    display: inline-block;
+                    font-size: 1.6rem;
+                    color: $darkPurple;
+                    line-height: 3.6rem;
+                    letter-spacing: 0.012rem;
+                    width: 70%;
+                    overflow: auto;
+                }
+                & button {
+                    margin-left: 1rem;
+                }
+            }
             &--right {
                 border-top: 1px solid rgb(158, 154, 168, 0.25);
-
-                color: $cyan;
                 & .btnInput {
                     width: 100%;
                     display: grid;
@@ -79,17 +124,21 @@
             }
         }
         &--savedLink,
-        &--savedLink--right {
+        &--savedLink--right a {
             font-size: 1.6rem;
             font-weight: $medium;
             line-height: 3.6rem;
             letter-spacing: 0.012rem;
         }
+        &--savedLink--right a:first-child {
+            color: $cyan;
+            text-decoration: none;
+        }
     }
 }
 
 .clicked {
-    background-color: $darkPurple;
+    background-color: $darkPurple !important;
 }
 
 @media screen and (min-width: 912px) {
@@ -113,15 +162,27 @@
             }
         }
         &__links {
+            & .btn {
+                width: 25%;
+                margin: auto;
+            }
             &--savedLink {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                &--url {
+                    justify-content: flex-start;
+                    width: 50%;
+                    &-text {
+                        display: inline-block;
+                    }
+                    & button {
+                        margin-left: 1rem;
+                    }
+                }
                 &--right {
                     display: flex;
                     border-top: none;
-
-                    width: 34.4rem;
                     justify-content: space-between;
                     &-link {
                         display: grid;
@@ -132,6 +193,7 @@
                         height: 4rem;
                         font-size: 1.5rem;
                         line-height: 2.25rem;
+                        margin-left: 2.4rem;
                     }
                 }
             }
@@ -139,8 +201,31 @@
             &--savedLink--right {
                 font-size: 2rem;
                 letter-spacing: 0.015rem;
-                padding: 0;
+                position: relative;
             }
         }
+    }
+    .error {
+        &__text {
+            font-size: 1.6rem;
+            position: absolute;
+            bottom: 20%;
+            transform: translateY(50%);
+            -webkit-transform: translateY(50%);
+            -moz-transform: translateY(50%);
+            -ms-transform: translateY(50%);
+            -o-transform: translateY(50%);
+        }
+    }
+}
+
+.deleteThis {
+    color: $red;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
     }
 }
