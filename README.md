@@ -37,6 +37,8 @@ Users should be able to:
 
 ## My process
 
+While I was able to finish all requirements for this exercise, I also wanted to go a little further and make this a CRUD app. So not only does this save when you leave the page or refresh (as long as you don't delete cookies), you can also delete an individual entry or all.
+
 ### Built with
 
 -   Semantic HTML5 markup
@@ -55,7 +57,7 @@ Users should be able to:
 Here is a small bit of code I was happy with. An issue I was having was saving to local storage as the array is updated. However, the array was updated by mutating the state which is asynchronous. So the last entry would not save if I were to refresh or leave the site immediately after. To fix this I added this effect to call `saveStorage()` every time I would fetch a new link.
 
 ```js
-// * allows list to update    dependant on fetchLink being ran but wont overwrite array on load
+// * allows list to update dependant on fetchLink being ran but wont overwrite array on load
 useEffect(() => {
     if (updating === true) {
         saveStorage();
