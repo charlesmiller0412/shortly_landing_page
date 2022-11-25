@@ -33,6 +33,10 @@ export const Input = () => {
                 const json = await response.json();
                 if (!json.ok) {
                     setErrorMsg(json.error);
+                    setError(true);
+                    setTimeout(() => {
+                        setError(false);
+                    }, 10000);
                 } else {
                     setLinks([
                         ...links,
