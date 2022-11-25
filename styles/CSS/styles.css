@@ -130,6 +130,7 @@ section {
 
 .userLinks .btn {
   font-size: 1.8rem;
+  color: #fff;
 }
 
 .btn {
@@ -760,7 +761,7 @@ section {
   gap: 3.8rem;
   margin-top: 4.7rem;
 }
-.footer__links h5 {
+.footer__links h4 {
   font-size: 1.6rem;
   line-height: 2.4rem;
   letter-spacing: 0.025rem;
@@ -798,7 +799,7 @@ section {
     padding-right: 1vw;
     gap: 2.5vw;
   }
-  .footer__links h5 {
+  .footer__links h4 {
     font-size: clamp(1.1rem, 1.3vw, 1.5rem);
   }
   .footer__links ul li a {
