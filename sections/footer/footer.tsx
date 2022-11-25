@@ -15,7 +15,7 @@ export const Footer = () => {
     return (
         <div className="footer">
             <div className="footer__logo">
-                <a href="#">
+                <a href="#" aria-label="home">
                     <Image
                         src="/assets/logo.svg"
                         alt="shortly"
@@ -29,13 +29,19 @@ export const Footer = () => {
                     <h4>Features</h4>
                     <ul>
                         <li>
-                            <a href="#">link sharing</a>
+                            <a href="#" aria-label="link sharing">
+                                link sharing
+                            </a>
                         </li>
                         <li>
-                            <a href="#">branded links</a>
+                            <a href="#" aria-label="brand links">
+                                branded links
+                            </a>
                         </li>
                         <li>
-                            <a href="#">analytics</a>
+                            <a href="#" aria-label="analytics">
+                                analytics
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -43,13 +49,19 @@ export const Footer = () => {
                     <h4>Resources</h4>
                     <ul>
                         <li>
-                            <a href="#">blog</a>
+                            <a href="#" aria-label="blog">
+                                blog
+                            </a>
                         </li>
                         <li>
-                            <a href="#">developers</a>
+                            <a href="#" aria-label="developers">
+                                developers
+                            </a>
                         </li>
                         <li>
-                            <a href="#">support</a>
+                            <a href="#" aria-label="support">
+                                support
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -57,16 +69,24 @@ export const Footer = () => {
                     <h4>Company</h4>
                     <ul>
                         <li>
-                            <a href="#">about</a>
+                            <a href="#" aria-label="about">
+                                about
+                            </a>
                         </li>
                         <li>
-                            <a href="#">our team</a>
+                            <a href="#" aria-label="our team">
+                                our team
+                            </a>
                         </li>
                         <li>
-                            <a href="#">careers</a>
+                            <a href="#" aria-label="careers">
+                                careers
+                            </a>
                         </li>
                         <li>
-                            <a href="#">contact</a>
+                            <a href="#" aria-label="contact">
+                                contact
+                            </a>
                         </li>
                     </ul>
                 </div>

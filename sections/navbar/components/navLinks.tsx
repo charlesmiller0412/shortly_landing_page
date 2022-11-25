@@ -3,13 +3,19 @@ export const NavLinks = () => {
         <div className="navLinks">
             <ul>
                 <li>
-                    <a href="#">features</a>
+                    <a href="#" aria-label="features">
+                        features
+                    </a>
                 </li>
                 <li>
-                    <a href="#">pricing</a>
+                    <a href="#" aria-label="pricing">
+                        pricing
+                    </a>
                 </li>
                 <li>
-                    <a href="#">resources</a>
+                    <a href="#" aria-label="resources">
+                        resources
+                    </a>
                 </li>
             </ul>
         </div>
