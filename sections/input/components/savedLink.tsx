@@ -33,12 +33,13 @@ export const SavedLink = (props: any) => {
                         {props.newLink}
                     </a>
                 </div>
-                <Btn
-                    text={copied == true ? "copied!" : "copy"}
+                <button
                     className={copied == true ? "btnInput clicked" : "btnInput"}
                     onClick={handleClick}
                     id="copyBtn1"
-                />
+                >
+                    {copied == true ? "copied!" : "copy"}
+                </button>
             </div>
         </div>
     );

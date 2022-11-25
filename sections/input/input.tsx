@@ -128,7 +128,7 @@ export const Input = () => {
                         {errorMsg}
                     </span>
 
-                    <a
+                    <button
                         id="formSubmit"
                         className="btnInput"
                         onClick={(e) => {
@@ -136,7 +136,7 @@ export const Input = () => {
                         }}
                     >
                         Shorten It!
-                    </a>
+                    </button>
                 </form>
                 <div className="input__links" id="linkList">
                     {links.map((link: any) => (
@@ -149,11 +149,9 @@ export const Input = () => {
                         />
                     ))}
                     {links.length > 0 ? (
-                        <Btn
-                            className="btn"
-                            text="clear all links"
-                            onClick={clearAll}
-                        />
+                        <button className="btn" onClick={clearAll}>
+                            clar all links
+                        </button>
                     ) : (
                         ""
                     )}
