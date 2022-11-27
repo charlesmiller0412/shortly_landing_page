@@ -136,6 +136,7 @@ export const Input = () => {
                         id="formSubmit"
                         className="btnInput"
                         onClick={(e) => {
+                            e.preventDefault();
                             fetchLink();
                         }}
                     >
